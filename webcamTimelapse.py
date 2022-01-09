@@ -14,14 +14,14 @@ import sys
 ###############################################
 
 savePath = os.path.normpath(os.getcwd() + "/images/")
-logging.basicConfig(filename= savePath + "timelapse.log", encoding='utf-8', level=logging.DEBUG, format="%(asctime)s: [%(levelname)s] - %(message)s")
+logging.basicConfig(filename= os.getcwd() + "/timelapse.log", encoding='utf-8', level=logging.DEBUG, format="%(asctime)s: [%(levelname)s] - %(message)s")
 logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 ffmpegSettings = ["-r", "30", "-f", "concat", "-safe", "0", "-vcodec", "libx264", "-crf", "25", "-pix_fmt", "yuv420p"]
 
 # Add cameras here
 cameraList = []
-cameraList.append(Camera("New Shed", "http://192.168.0.31/snap.jpeg", savePath + "/NewShed", 0, 24, 5))
-cameraList.append(Camera("Harrison & Tamsin's House", "http://192.168.0.27/cgi-bin/api.cgi?cmd=Snap&channel=0&rs=as1234&user=admin&password=harrison", savePath + "/HazzTamsinHouse", 0, 24, 5))
+cameraList.append(Camera("New Shed", "http://192.168.0.31/snap.jpeg", os.path.normpath("//192.168.0.2/File Shares/Timelapse/NewShed", 6, 19, 30)))
+#cameraList.append(Camera("Harrison & Tamsin's House", "http://192.168.0.27/cgi-bin/api.cgi?cmd=Snap&channel=0&rs=as1234&user=admin&password=harrison", os.path.join(savePath, "HazzTamsinHouse"), 0, 24, 5))
 
 
 
