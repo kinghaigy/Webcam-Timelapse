@@ -20,7 +20,7 @@ ffmpegSettings = ["-r", "30", "-f", "concat", "-safe", "0", "-vcodec", "libx264"
 
 # Add cameras here
 cameraList = []
-cameraList.append(Camera("New Shed", "http://192.168.0.31/snap.jpeg", os.path.normpath("//192.168.0.2/File Shares/Timelapse/NewShed", 6, 19, 30)))
+cameraList.append(Camera("New Shed", "http://192.168.0.31/snap.jpeg", os.path.normpath("//192.168.0.2/File Shares/Timelapse/NewShed"), 6, 19, 30))
 #cameraList.append(Camera("Harrison & Tamsin's House", "http://192.168.0.27/cgi-bin/api.cgi?cmd=Snap&channel=0&rs=as1234&user=admin&password=harrison", os.path.join(savePath, "HazzTamsinHouse"), 0, 24, 5))
 
 
